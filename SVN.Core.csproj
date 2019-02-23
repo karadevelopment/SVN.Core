@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Casting\Extensions.cs" />
+    <Compile Include="Collections\Extensions.cs" />
     <Compile Include="Enums\Extensions.cs" />
     <Compile Include="Format\Extensions.cs" />
     <Compile Include="Linq\Extensions.cs" />

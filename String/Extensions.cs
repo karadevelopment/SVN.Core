@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using SVN.Core.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace SVN.Core.String
 {
@@ -22,6 +24,16 @@ namespace SVN.Core.String
         public static bool HasCharLast(this string param, char value)
         {
             return param.HasChar(param.Length - 1, value);
+        }
+
+        public static int NextIndex(this string param, params char[] chars)
+        {
+            return chars.Select(x => param.IndexOf(x)).Add(param.Length).Select(x => x != -1 ? x : int.MaxValue).Min();
+        }
+
+        public static string WhiteSpaceIfAny<T>(this IEnumerable<T> param)
+        {
+            return param.Any() ? " " : string.Empty;
         }
 
         public static string Copy(this string param, int index, int length)
