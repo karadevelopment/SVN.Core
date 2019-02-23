@@ -28,7 +28,7 @@ namespace SVN.Core.String
 
         public static int NextIndex(this string param, params char[] chars)
         {
-            return chars.Select(x => param.IndexOf(x)).Add(param.Length).Select(x => x != -1 ? x : int.MaxValue).Min();
+            return chars.Select(x => param.IndexOf(x)).With(param.Length).Select(x => x != -1 ? x : int.MaxValue).Min();
         }
 
         public static string WhiteSpaceIfAny<T>(this IEnumerable<T> param)
