@@ -143,5 +143,35 @@ namespace SVN.Core.String
         {
             return Extensions.Remove(param, index, param.IndexOf(value) - index + additionalLength);
         }
+
+        public static bool ParseBool(this string param)
+        {
+            bool.TryParse(param, result: out var result);
+            return result;
+        }
+
+        public static int ParseInt(this string param)
+        {
+            int.TryParse(param, result: out var result);
+            return result;
+        }
+
+        public static float ParseFloat(this string param)
+        {
+            float.TryParse(param, result: out var result);
+            return result;
+        }
+
+        public static double ParseDouble(this string param)
+        {
+            double.TryParse(param, result: out var result);
+            return result;
+        }
+
+        public static decimal ParseDecimal(this string param)
+        {
+            decimal.TryParse(param, result: out var result);
+            return result;
+        }
     }
 }
