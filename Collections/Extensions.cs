@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace SVN.Core.Collections
@@ -15,6 +16,14 @@ namespace SVN.Core.Collections
         public static T Get<T>(this IEnumerable<T> param, int slot)
         {
             return param.ElementAtOrDefault(slot - 1);
+        }
+
+        public static T Random<T>(this IEnumerable<T> param)
+        {
+            var random = new Random(DateTime.Now.Millisecond);
+            var slot = random.Next(1, param.Count());
+            var index = slot - 1;
+            return param.ElementAt(index);
         }
     }
 }
