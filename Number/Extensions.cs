@@ -75,5 +75,12 @@ namespace SVN.Core.Number
         {
             return param * .9 + approximation * .1;
         }
+
+        public static double Sigmoid(this double param)
+        {
+            var value = 1;
+            var valueMax = 1 + Math.Pow(Math.E, -param);
+            return value / valueMax;
+        }
     }
 }
