@@ -25,5 +25,10 @@ namespace SVN.Core.Collections
             var index = slot - 1;
             return param.ElementAt(index);
         }
+
+        public static List<T> Invert<T>(this IEnumerable<T> param)
+        {
+            return param.Reverse().ToList();
+        }
     }
 }
