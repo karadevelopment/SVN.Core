@@ -21,7 +21,7 @@ namespace SVN.Core.Collections
         public static T Random<T>(this IEnumerable<T> param)
         {
             var random = new Random(DateTime.Now.Millisecond);
-            var slot = random.Next(1, param.Count());
+            var slot = random.Next(1, param.Count() + 1);
             var index = slot - 1;
             return param.ElementAt(index);
         }
