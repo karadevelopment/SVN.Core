@@ -11,6 +11,16 @@ namespace SVN.Core.Format
             return $"{param.TotalHours:N0}:{param.Minutes:D2}:{param.Seconds:D2}";
         }
 
+        public static string FormatByteSize(this short param)
+        {
+            return ((long)param).FormatByteSize();
+        }
+
+        public static string FormatByteSize(this int param)
+        {
+            return ((long)param).FormatByteSize();
+        }
+
         public static string FormatByteSize(this long param)
         {
             var i = default(int);
