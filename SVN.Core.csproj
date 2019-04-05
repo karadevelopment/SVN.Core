@@ -48,6 +48,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="String\Extensions.cs" />
     <Compile Include="Time\Extensions.cs" />
+    <Compile Include="Utils.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SVN.Debug\SVN.Debug.csproj">
